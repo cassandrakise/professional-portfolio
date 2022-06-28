@@ -53,82 +53,24 @@ h1, h2, h3 {
 	z-index: 10;
 	font-size: 16px;
 	line-height: 1.5;
+}
 
-	@media screen and (max-width: --md) {
-		transform: translateX(-250px);
-		padding-top: 40px;
+.ckpp-aside .ckpp-overflow{
+	height: 500px;
+}
 
-		transform: translateX(0px);	
-	}
-	
+.ckpp-aside .ckise-aside-footer{
+	font-size: 14px;
+	padding-left: 30px;
+	position: absolute;
+	bottom: 20px;
+}
 
-	.ckpp-site-logo {
-		padding: 30px 30px 30px 30px;
-		position: relative;
+.ckpp-aside @media screen and (max-width: --md) { /* need to research how to put media under a class */
+	transform: translateX(-250px);
+	padding-top: 40px;
 
-		.ckpp-logo {
-			font-size: 60px;
-			text-decoration: none;
-			color: --black;
-			color: --primary;
-			text-transform: uppercase;
-			letter-spacing: .05em;
-		}
-		
-	}
-	.ckpp-nav {
-		padding-left: 30px;
-		ul {
-			padding: 0;
-			margin: 0;
-			li {
-				padding: 0;
-				margin: 0 0 10px 0;
-				display: block;
-				list-style: none;
-				float: left;
-				width: 100%;
-				a {
-					color: --black;
-					padding: 3px 0;
-					display: block;
-					float: left;
-					position: relative;
-					&:after {
-						content: "";
-						position: absolute;
-						bottom: 0;
-						width: 0;
-						left: 0;
-						height: 2px;
-						background: --primary;
-						transition: .3s width ease-out;
-					}
-					&:hover {
-						&:after {
-							width: 30px;
-						}
-					}
-				}
-				&.active {
-					a {
-						&:after {
-							width: 100%;
-						}
-					}
-				}
-			}
-		}
-	}
-	.ckpp-overflow {
-		height: 500px;
-	}
-	.ckpp-aside-footer {
-		font-size: 14px;
-		padding-left: 30px;
-		position: absolute;
-		bottom: 20px;
-	}
+	transform: translateX(0px);	
 }
 
 .ckpp-aside .ckpp-site-logo {
@@ -146,6 +88,50 @@ h1, h2, h3 {
 	letter-spacing: .05em;
 }
 
+.ckpp-aside .ckpp-nav {
+	padding-left: 30px;
+}
+
+.ckpp-aside .ckpp-nav ul{
+	padding: 0;
+	margin: 0;
+}
+
+.ckpp-aside .ckpp-nav ul li {
+	padding: 0;
+	margin: 0 0 10px 0;
+	display: block;
+	list-style: none;
+	float: left;
+	width: 100%;
+}
+
+.ckpp-aside .ckpp-nav ul li a {
+	color: --black;
+	padding: 3px 0;
+	float: left;
+	position: relative;
+}
+
+.ckpp-aside .ckpp-nav ul li a :after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 0;
+	left: 0;
+	height: 2px;
+	background: --primary;
+	transition: .3s width ease-out;
+}
+
+.ckpp-aside .ckpp-nav ul li a :hover :after{
+	width: 30px;
+}
+
+.ckpp-aside .ckpp-nav ul li :active a :after{
+	width: 100%;
+}
+
 .ckpp-aside .ckpp-close-menu {
 	position: absolute;
 		right: 15px;
@@ -161,18 +147,20 @@ h1, h2, h3 {
 		top: 2px;
 	}
 
-.ckpp-aside-social {
-	li {
-		display: inline-block;
-	}
-	a {
-		display: inline-block;
-		color: lighten(--black, 40%);
-		font-size: 20px;
-		&:hover {
-			color: --primary;
-		}
-	}
+.ckpp-aside-social {} /* needs to be decided if this class should be kept or deleted */
+
+.ckpp-aside-social li {
+	display: inline-block;
+}
+
+.ckpp-aside-social a{
+	display: inline-block;
+	color: lighten (--black, 40%);
+	font-size: 20px;
+}
+
+.ckpp-aside-social a :hover {
+	color: --primary;
 }
 
 .ckpp-main {
@@ -180,115 +168,124 @@ h1, h2, h3 {
 	float: right;
 	padding: 30px;
 	position: relative;
-	&:before {
-		background: rgba(0,0,0,.5);
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		z-index: 6;
-		visibility: hidden;
-		opacity: 0;
-		transition: .6s all ease;
-	}
-	&.mobile-open {
-		&:before {
-			visibility: visible;
-			opacity: 1;
-		}
-	}
-	.ckpp-bar {
-		position: fixed;
-		top: 0;
-		padding: 20px 0;
-		z-index: 5;
-		background: --white;
-		width: calc(100% - 250px);
-		transform: translateY(-100%);
+
+}
+
+.ckpp-main :before{
+	background: rgba(0,0,0,.5);
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 6;
+	visibility: hidden;
+	opacity: 0;
+	transition: .6s all ease;
+}
+
+.ckpp-main .mobile-open :before{
+	visibility: visible;
+	opacity: 1;
+}
+
+.ckpp-main .ckpp-bar {
+	position: fixed;
+	top: 0;
+	padding: 20px 0;
+	z-index: 5;
+	background: --white;
+	width: calc(100% - 250px);
+	transform: translateY(-100%);
+}
+
+.ckpp-main .ckpp-bar @media {
+
+}
 		@media screen and (max-width: --md) {
 			width: 100%;
 			left: 0;
 			right: 0;
 			transform: translateY(0%);
 		}
-		.ckpp-toggle {
-			position: absolute;
-			left: 15px;
-			font-size: 20px;
-			color: $black;
-			z-index: 2;
-			top: 50%;
-			transform: translateY(-50%);
-		}
-		.ckpp-main-site-logo {
-			margin: 0 auto;
-			width: 100px;
-			text-align: center;
-			position: relative;
-			a {
-				font-size: 20px;
-				text-decoration: none;
-				color: --black;
-				text-transform: uppercase;
-				letter-spacing: .05em;
-			}
-		}
-	}
+.ckpp-main .ckpp-bar .ckpp-toggle {
+	position: absolute;
+	left: 15px;
+	font-size: 20px;
+	color: --black;
+	z-index: 2;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.ckpp-main .ckpp-bar .ckpp-main-site-logo {
+	margin: 0 auto;
+	width: 100px;
+	text-align: center;
+	position: relative;
+}
+
+.ckpp-main .ckpp-bar .ckpp-main-site-logo a{
+	font-size: 20px;
+	text-decoration: none;
+	color: --black;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+}
+		
 	@media screen and (max-width: --md) {
 		width: 100%;
 		padding: 30px 15px;
 	}
-	.card-columns {
-		
-		
-		@media screen and (max-width: --xl) {
-			columns: 3;
+.ckpp-main .ckpp-bar .ckpp-main-site-logo a .card-columns {
+	@media screen and (max-width: --xl) {
+		columns: 3;
 		}
-		
-		@media screen and (max-width: --lg) {
-			columns: 2;
+	@media screen and (max-width: --lg) {
+		columns: 2;
 		}
-		@media screen and (max-width: --md) {
-			columns: 2;
+	@media screen and (max-width: --md) {
+		columns: 2;
 		}
-		@media screen and (max-width: --sm) {
+	@media screen and (max-width: --sm) {
 			columns: 1;
 		}
-		.card {
-			background: lighten(#ccc, 10%);
-			border: none;
-			border-radius: 0px!important;
-			margin-bottom: 20px;
-			transform: scale(1.0);
-			transition: .2s all ease;
-			position: relative;
-			opacity: 0;
-			visibility: hidden;
-			&.img-loaded {
-				opacity: 1;
-				visibility: visible;
-			}
-			
-			a {
-				position: relative;
-				display: block;
-				{	z-index: 1;
-					content: "";
-					background: rgba(255,255,255,.7);
-					position: absolute;
+	}
 
-					
-					top: 0px;
-					left: 0px;
-					right: 0px;
-					bottom: 0px;
+.ckpp-main .ckpp-bar .ckpp-main-site-logo a .card {
+	background: lighten(#ccc, 10%);
+	border: none;
+	border-radius: 0px!important;
+	margin-bottom: 20px;
+	transform: scale(1.0);
+	transition: .2s all ease;
+	position: relative;
+	opacity: 0;
+	visibility: hidden
+}
 
-					visibility: hidden;
-					opacity: 0;
-					transition: .3s all ease;
-				}
+.ckpp-main .ckpp-bar .ckpp-main-site-logo .img-loaded {
+	opacity: 1;
+	visibility: visible;
+}
+
+.ckpp-main .ckpp-bar .ckpp-main-site-logo .img-loaded a {
+	position: relative;
+	display: block;
+	z-index: 1;
+	content: "";
+	background: rgba(255,255,255,.7);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	visibility: hidden;
+	opacity: 0;
+	transition: .3s all ease;
+}
+
 				.card-img-top {
 					border-top-left-radius: 0px!important;
 					border-top-right-radius: 0px!important;
@@ -324,8 +321,17 @@ h1, h2, h3 {
 	background: lighten( --black, 10%);
   	@extend .bg-image;
  	 background-position: center center;
- 
-	.ckpp-heading {
+}
+@extend .bg-image {
+		background-position: center center;
+} 
+
+.ckpp-cover .ckpp-heading{
+	font-size: 45px;
+	line-height: 1.34;
+	color: --white;
+}
+.ckpp-heading {
 		font-size: 45px;
 		line-height: 1.34;
 		color: --white;
@@ -343,19 +349,19 @@ h1, h2, h3 {
 			border: 1px solid red;
 		}
 	}
-	a {
-		position: relative;
-		color: --white;
-		::before {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			background: --primary;
-			height: 2px;
-			content: " ";
-		}
+.ckpp-heading a {
+	position: relative;
+	color: --white;
 	}
+.ckpp-heading a :before{
+	position:absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: --primary;
+	height: 2px;
+	content: " ";
+}
 	&.overlay {
 		position: relative;
 		::before {
@@ -410,9 +416,14 @@ h1, h2, h3 {
 	color: --black!important;
 	font-size: 18px;
 	::focus, ::active {
-		border: 2px solid $black;
+		border: 2px solid --black;
 	}
 }
+
+.form-control :focus :active{
+	border: 2px solid --black
+}
+
 textarea {
 	height: inherit!important;
 }
@@ -453,40 +464,45 @@ textarea {
 }
 .ckpp-footer {
 	font-size: 16px;
-	.ckpp-footer-logo {
-		text-transform: uppercase;
-		letter-spacing: .1em;
-	}
-	.ckpp-footer-widget {
-		h2 {
-			font-weight: normal;
-		}
-	}
-	p {
-		color: rgba(--white, .3);
-	}
-	&.ckpp-bg-dark {
-		background: darken(#2A363B, 4%);
-	}
-	a {
-		color: rgba(--white, .3);
-		::hover {
-			color: --primary;
-		}
-	}
-	.ckpp-heading {
-		font-size: 24px;
-	}
-	.ckpp-heading-2 {
-		font-size: 14px;
-		font-weight: bold;
-		letter-spacing: .05em;
-		text-transform: uppercase;
-		color: rgba(255,255,255,.6);
-	}
+
 }
 
+.ckpp-footer .ckpp-footer-logo {
+	text-transform: uppercase;
+	letter-spacing: .1em;
+}
+	
+.ckpp-footer h2 {
+	font-weight: normal;
+}
 
+.ckpp-footer p {
+	color: rgba (--white, .3)
+}
+
+.ckpp-footer .ckpp-bg-dark {
+	background: darken(#2A363B, 4%);
+}
+
+.ckpp-footer a {
+	color: rgba(--white, .3)
+}
+
+.ckpp-footer a :hover{
+	color: --primary;
+}
+
+.ckpp-footer .ckpp-heading {
+	font-size: 24px;
+}
+
+.ckpp-footer .ckpp-heading-2{
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+	color: rgba(255,255,255,.6)
+}
 
 
 .ckpp-footer-social {
