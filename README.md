@@ -5,6 +5,9 @@ First submission
 Hello wonderful grader,
     As a heads-up, this assignment is particularly half-baked and I will be continuing to work on this after submitting it. Struggled with this some and will have time this coming weekend to dive deeper. Apologies for the mess as I work this assignment out!
 
+     https://cassandrakise.github.io/professional-portfolio/
+     https://github.com/cassandrakise/professional-portfolio
+
 Assignment prompt: 
     AS AN employer
     I WANT to view a potential employee's deployed portfolio of work samples
