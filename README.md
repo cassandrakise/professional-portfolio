@@ -1,6 +1,9 @@
 # professional-portfolio
 
+
 First submission
+Hello wonderful grader,
+    As a heads-up, this assignment is particularly half-baked and I will be continuing to work on this after submitting it. Struggled with this some and will have time this coming weekend to dive deeper. Apologies for the mess as I work this assignment out!
 
 Assignment prompt: 
     AS AN employer
